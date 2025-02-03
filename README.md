@@ -78,26 +78,42 @@ The following tools were used:
 - Age groups were categorized (e.g., children, adults, seniors).
 - Additional columns were added to split the patient admission date into **year*, **month*, **weekday*, **weeknomba*, and time in **hour* 
 
-### **Create the SQL View**
-- A SQL view was created to optimize data queries for Power BI, ensuring efficient load times and accurate reporting.
-
-### **Testing**
-
-#### **Data Quality Tests**
-- Duplicates were removed, and column integrity was verified.
-- Join keys between datasets were tested to ensure consistency.
-
 ---
 
-## **8. Visualization**
+## **7. Visualization**
 Interactive dashboards were created in Power BI, featuring:
-- Heatmaps of patient visits by day and hour.
-- Bar charts for satisfaction scores and wait times by department.
-- Gender and age group distribution.
+
+## **a. Key Metrics Cards (Top Section)**
+- Displays the total number of visits. It also tracks trends compared to the previous month.
 
 ---
 
-## **9. Results**
+## **b. Line Chart: Patient Visits by Weekday and Gender**
+- A line chart displaying visit trends for males (blue) and females (pink) across the days of the week (Sunday to Saturday). This highlights the differences in visit patterns between genders and identifies which days see the highest patient traffic.
+
+---
+
+## **c. Bar Chart: Patient Visit by Age Range**
+- A vertical bar chart breaking down visits into age groups: adults, seniors, and children. It identifies the dominant age group visiting the ER, providing insights for resource allocation based on patient demographics.
+
+---
+
+## **d. Matrix table: Patient Visits by Day and Time**
+- A grid showing the number of visits per hour for each day of the week (Sunday to Saturday). This provides a detailed view of when the ER is busiest, both by specific hours and days of the week.
+
+---
+
+## **e. Score Rating Table: Patient Race**
+- A table displaying racial categories (e.g., African American, Asian, White) along with corresponding satisfaction ratings (e.g., star ratings). It offers insights into satisfaction trends by race, helping identify if specific groups have consistently higher or lower satisfaction levels.
+
+---
+
+## **f. Horizontal Bar Chart: Avg. Wait Time by Department Referral**
+- A bar chart comparing average wait times across various departments (e.g., Physiotherapy, Gastroenterology, Neurology, etc.), highlighting which departments have longer wait times, allowing hospital staff to address bottlenecks or inefficiencies.
+
+---
+
+## **8. Results**
 
 ### **DAX Measures**
 Key measures created using DAX:
