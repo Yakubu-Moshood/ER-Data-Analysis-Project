@@ -10,9 +10,6 @@
     - [Data Exploration](#data-exploration)
     - [Data Cleaning](#data-cleaning)
     - [Transform the Data](#transform-the-data)
-    - [Create the SQL View](#create-the-sql-view)
-    - [Testing](#testing)
-        - [Data Quality Tests](#data-quality-tests)
 7. [Visualization](#visualization)
 8. [Results](#results)
     - [DAX Measures](#dax-measures)
@@ -116,10 +113,56 @@ Interactive dashboards were created in Power BI, featuring:
 ## **8. Results**
 
 ### **DAX Measures**
-Key measures created using DAX:
-- **Average Wait Time**: `Average(WaitTime)`
-- **Total Visits**: `Count(PatientID)`
-- **Satisfaction Rate**: `Average(SatisfactionScore)`
+# **Key Measures and Their Purpose**
+
+## **i. Satisfaction Measures**
+- **Avg Satisfaction Growth With Arrow**: Indicates the growth in satisfaction score compared to the previous month, with an up or down arrow.
+- **Avg Satisfaction Score**: Calculates the average satisfaction score of patients.
+- **Avg Satisfaction Score Growth**: Measures the percentage growth or decline in satisfaction scores compared to the previous month.
+- **Avg Satisfaction Score Growth Colour**: Determines if satisfaction growth is positive ("Green") or negative ("Red").
+- **Avg Satisfaction Score Max Value**: Finds the maximum satisfaction score across all days.
+- **Avg Satisfaction Score Min Value**: Finds the minimum satisfaction score across all days.
+- **Avg Satisfaction Score Variance**: Calculates the difference between the current month's satisfaction score and the previous month's.
+- **PM Avg Satisfaction Score**: Retrieves the previous month's average satisfaction score.
+
+---
+
+## **ii. Wait Time Measures**
+- **Avg Wait Time Growth**: Measures the percentage growth or decline in average wait time compared to the previous month.
+- **Avg Wait Time Growth With Arrow**: Displays wait time growth with an up or down arrow indicator.
+- **Avg Wait Time Colour**: Determines if wait time growth is positive ("Green") or negative ("Red").
+- **Avg Wait Time Max Value**: Finds the maximum wait time across all days.
+- **Avg Wait Time Min Value**: Finds the minimum wait time across all days.
+- **Avg Wait Time Variance**: Calculates the difference between the current month's average wait time and the previous month's.
+- **Avg_Wait_Time**: Calculates the average wait time of patients.
+- **PM Avg Wait Time**: Retrieves the previous month's average wait time.
+
+---
+
+## **iii. Patient Visit Measures**
+- **Patient Visit**: Counts the total number of patient visits.
+- **Patient Visit Growth**: Measures the percentage growth or decline in patient visits compared to the previous month.
+- **Patient Visit Growth Colour**: Determines if patient visit growth is positive ("Green") or negative ("Red").
+- **Patient Visit Growth With Arrow**: Displays visit growth with an up or down arrow indicator.
+- **Patient Visit Variance**: Calculates the difference between the current month's patient visits and the previous month's.
+- **Patient Visits Max Value**: Finds the maximum number of patient visits across all days.
+- **Patient Visits Min Value**: Finds the minimum number of patient visits across all days.
+- **PM Patient Visit**: Retrieves the previous month's total number of patient visits.
+
+---
+
+## **iv. Peak Period Measures**
+- **Busiest Day**: Identifies the day of the week with the highest number of patient visits.
+- **Busiest Time**: Identifies the hour with the highest number of patient visits.
+
+---
+
+## **v. Other Measures**
+- **Score Rating**: Converts the satisfaction score into a visual star rating (e.g., ★).
+- **Calendar**: Generates a calendar table with additional columns for year, month, day, weekday, and week type (weekday or weekend).
+- **Sat_Score_Param**: Parameter table for satisfaction breakdown by patient race, gender, or age range.
+
+---
 
 ### **Analysis**
 - Identified bottlenecks in the Gastroenterology and Cardiology departments.
