@@ -15,12 +15,9 @@
     - [DAX Measures](#dax-measures)
     - [Analysis](#analysis)
     - [Findings](#findings)
-9. [Validation](#validation)
-10. [Discovery](#discovery)
-11. [Recommendations](#recommendations)
-12. [Potential ROI](#potential-roi)
-13. [Potential Courses of Actions](#potential-courses-of-actions)
-14. [Conclusion](#conclusion)
+9. [Discovery](#discovery)
+10. [Recommendations](#recommendations)
+11. [Conclusion](#conclusion)
 
 
 ### **1. objective**
@@ -251,56 +248,54 @@ Departments with high volumes may face delays, while those with moderate loads b
 - Satisfaction Scores 
 Gastroenterology (5.8) and Neurology (5.3) excel in satisfaction, while Renal (4.6) and Orthopaedics (4.9) show areas for improvement.
 
+---
 
+### **9. Discovery**
 
+#### Peak Times and Days: 
 
+- Late-night hours and Saturdays are the busiest periods, indicating a need for increased staffing during these times.
 
+#### Demographics:
 
+- The diverse patient population underscores the need for culturally competent care and communication strategies.
 
+#### Operational Inefficiencies:
 
+- Departments with longer wait times, such as Neurology, require process improvements or additional resources.
 
-### **Findings**
-- Adult patients formed the majority of visits.
-- Wait times are strongly correlated with lower satisfaction scores.
+#### Seasonal Planning:
+
+- Traffic surges in summer and dips in winter highlight the importance of proactive planning for seasonal variations.**
 
 ---
 
-## **10. Validation**
-Dashboards were validated against the source data to ensure consistency:
-- Counts and averages matched the original dataset.
-- Charts accurately reflected query outputs.
+### 10. Recommendations
+Based on these findings, the following recommendations are proposed:
 
----
+#### Staffing Adjustments:
 
-## **11. Discovery**
-Key discoveries:
-- High-volume periods could strain ER resources.
-- Longer wait times led to a decrease in satisfaction scores.
-
----
-
-## **12. Recommendations**
-1. **Staff Optimisation**: Increase staff during peak times (e.g., 7:00 AM, midweek).
-2. **Streamline Bottlenecks**: Focus on improving workflows in Gastroenterology and Cardiology.
-3. **Communication**: Better communication during wait times to improve satisfaction.
-
----
-
-## **13. Potential ROI**
-Implementing the recommendations could:
-- Reduce patient wait times by 10-15%.
-- Increase satisfaction scores by 20%.
-- Improve resource allocation efficiency, reducing overtime costs.
-
----
-
-## **14. Potential Courses of Actions**
 - Implement a shift-scheduling system to align with peak times.
+- Increase staffing during late-night hours, particularly on Saturdays, to handle peak traffic.
+- Reallocate staff to high-bottleneck departments like Neurology and Physiotherapy to reduce wait times.
+
+#### Process Optimisation:
+
+- Streamline triaging and patient referral processes to improve throughput in high-wait departments.
+- Introduce pre-registration options or self-service kiosks to reduce delays in patient check-ins.
 - Introduce a triage system to prioritize urgent cases during bottlenecks.
+
+#### Predictive Modelling:
+
+- Use historical data to develop predictive models for patient flow, enabling better preparation for peak hours and seasonal traffic.
 - Automate patient feedback collection to identify specific areas of dissatisfaction.
 
+#### Cultural Competency:
+
+- Train staff to cater to diverse patient populations effectively, ensuring high satisfaction across all demographic groups.
+
 ---
 
-## **15. Conclusion**
+## **11. Conclusion**
 This project demonstrated the value of data-driven decision-making in healthcare. By analyzing ER data, we identified inefficiencies and proposed actionable steps to improve patient care and satisfaction. The insights and dashboards provide a framework for continuous monitoring and improvement.
 
