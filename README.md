@@ -1,23 +1,55 @@
 # **Emergency Room Data Analysis Project**
 
-## **Table of Contents**
-1. [Objective](#objective)
-2. [Data Source](#data-source)
-3. [Stages](#stages)
-4. [Design](#design)
-5. [Tools](#tools)
-6. [Process](#process)
-    - [Data Exploration](#data-exploration)
-    - [Data Cleaning](#data-cleaning)
-    - [Transform the Data](#transform-the-data)
-7. [Visualization](#visualization)
-8. [Results](#results)
-    - [DAX Measures](#dax-measures)
-    - [Analysis](#analysis)
-    - [Findings](#findings)
-9. [Discovery](#discovery)
-10. [Recommendations](#recommendations)
-11. [Conclusion](#conclusion)
+# Table of Contents
+
+- [1. Objective](#1-objective)
+- [2. Data Source](#2-data-source)
+- [3. Stages](#3-stages)
+- [4. Design](#4-design)
+- [5. Tools](#5-tools)
+- [6. Process](#6-process)
+  - [Data Exploration](#data-exploration)
+  - [Data Cleaning](#data-cleaning)
+  - [Transform the Data](#transform-the-data)
+- [7. Visualization](#7-visualization)
+  - [a. Key Metrics Cards (Top Section)](#a-key-metrics-cards-top-section)
+  - [b. Line Chart: Patient Visits by Weekday and Gender](#b-line-chart-patient-visits-by-weekday-and-gender)
+  - [c. Bar Chart: Patient Visit by Age Range](#c-bar-chart-patient-visit-by-age-range)
+  - [d. Matrix Table: Patient Visits by Day and Time](#d-matrix-table-patient-visits-by-day-and-time)
+  - [e. Score Rating Table: Patient Race](#e-score-rating-table-patient-race)
+  - [f. Horizontal Bar Chart: Avg. Wait Time by Department Referral](#f-horizontal-bar-chart-avg-wait-time-by-department-referral)
+- [8. Results](#8-results)
+  - [DAX Measures](#dax-measures)
+    - [i. Satisfaction Measures](#i-satisfaction-measures)
+    - [ii. Wait Time Measures](#ii-wait-time-measures)
+    - [iii. Patient Visit Measures](#iii-patient-visit-measures)
+    - [iv. Peak Period Measures](#iv-peak-period-measures)
+    - [v. Other Measures](#v-other-measures)
+- [9. Analysis](#9-analysis)
+  - [a. Trends in ER Patient Visits](#a-trends-in-er-patient-visits)
+    - [i. What are patient visit peak times (days and hours)?](#i-what-are-patient-visit-peak-times-days-and-hours)
+    - [ii. Do patient visit patterns vary by gender, age, or race?](#ii-do-patient-visit-patterns-vary-by-gender-age-or-race)
+    - [iii. Are there seasonal or monthly trends affecting ER visits?](#iii-are-there-seasonal-or-monthly-trends-affecting-er-visits)
+  - [b. Wait Times and Satisfaction](#b-wait-times-and-satisfaction)
+    - [i. How long do patients wait on average across all visits?](#i-how-long-do-patients-wait-on-average-across-all-visits)
+    - [ii. Which departments have the longest and shortest wait times?](#ii-which-departments-have-the-longest-and-shortest-wait-times)
+    - [iii. Is there a relationship between wait times and satisfaction scores?](#iii-is-there-a-relationship-between-wait-times-and-satisfaction-scores)
+    - [iv. Do wait times differ by patient demographics?](#iv-do-wait-times-differ-by-patient-demographics)
+  - [c. Department Referrals](#c-department-referrals)
+    - [i. Which departments receive the highest number of referrals?](#i-which-departments-receive-the-highest-number-of-referrals)
+    - [ii. Do satisfaction scores vary by department?](#ii-do-satisfaction-scores-vary-by-department)
+- [10. Discovery](#10-discovery)
+  - [Peak Times and Days](#peak-times-and-days)
+  - [Demographics](#demographics)
+  - [Operational Inefficiencies](#operational-inefficiencies)
+  - [Seasonal Planning](#seasonal-planning)
+- [11. Recommendations](#11-recommendations)
+  - [Staffing Adjustments](#staffing-adjustments)
+  - [Process Optimisation](#process-optimisation)
+  - [Predictive Modelling](#predictive-modelling)
+  - [Cultural Competency](#cultural-competency)
+- [12. Conclusion](#12-conclusion)
+
 
 
 ### **1. objective**
@@ -170,7 +202,8 @@ The DAX formula for all the above measures is [here](https://github.com/Yakubu-M
 
 ---
 
-### **Analysis**
+### 9. **Analysis**
+
 #### a. Trends in ER Patient Visits
 
 #### I. What are patient visit peak times (days and hours)?
@@ -250,7 +283,7 @@ Gastroenterology (5.8) and Neurology (5.3) excel in satisfaction, while Renal (4
 
 ---
 
-### **9. Discovery**
+### **10. Discovery**
 
 #### Peak Times and Days: 
 
@@ -270,7 +303,7 @@ Gastroenterology (5.8) and Neurology (5.3) excel in satisfaction, while Renal (4
 
 ---
 
-### 10. Recommendations
+### **11. Recommendations**
 Based on these findings, the following recommendations are proposed:
 
 #### Staffing Adjustments:
@@ -296,6 +329,11 @@ Based on these findings, the following recommendations are proposed:
 
 ---
 
-## **11. Conclusion**
-This project demonstrated the value of data-driven decision-making in healthcare. By analyzing ER data, we identified inefficiencies and proposed actionable steps to improve patient care and satisfaction. The insights and dashboards provide a framework for continuous monitoring and improvement.
+### **12. Conclusion**
+
+This project provides a data-driven framework for optimizing Emergency Room (ER) operations at St. Haven, offering critical insights tailored to enhance patient care and operational efficiency. By analyzing key metrics such as patient demographics, visit patterns, wait times, and satisfaction scores, we identified actionable trends such as peak traffic periods (Saturdays at 11 PM) and bottlenecks in high-demand departments like Neurology and Physiotherapy.
+
+The analysis underscores the importance of staffing adjustments during late-night hours and weekends, streamlining department referrals, and prioritizing culturally competent care to meet the needs of a diverse patient population. It also highlights the need to address operational inefficiencies, particularly in high-wait departments, to maintain high patient satisfaction and improve throughput.
+
+With a clear action plan in place, St. Haven Hospital can leverage these insights to allocate resources more effectively, reduce wait times, and enhance patient outcomes. This strategy not only aligns with current patient flow trends but also positions the hospital for sustained operational success and improved care delivery in an increasingly demanding healthcare landscape.
 
