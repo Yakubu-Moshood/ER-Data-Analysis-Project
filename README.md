@@ -5,37 +5,35 @@
 2. [Data Source](#data-source)
 3. [Stages](#stages)
 4. [Design](#design)
-5. [Mockup](#mockup)
-6. [Tools](#tools)
-7. [Process](#process)
+5. [Tools](#tools)
+6. [Process](#process)
     - [Data Exploration](#data-exploration)
     - [Data Cleaning](#data-cleaning)
     - [Transform the Data](#transform-the-data)
     - [Create the SQL View](#create-the-sql-view)
     - [Testing](#testing)
         - [Data Quality Tests](#data-quality-tests)
-8. [Visualization](#visualization)
-9. [Results](#results)
+7. [Visualization](#visualization)
+8. [Results](#results)
     - [DAX Measures](#dax-measures)
     - [Analysis](#analysis)
     - [Findings](#findings)
-10. [Validation](#validation)
-11. [Discovery](#discovery)
-12. [Recommendations](#recommendations)
-13. [Potential ROI](#potential-roi)
-14. [Potential Courses of Actions](#potential-courses-of-actions)
-15. [Conclusion](#conclusion)
+9. [Validation](#validation)
+10. [Discovery](#discovery)
+11. [Recommendations](#recommendations)
+12. [Potential ROI](#potential-roi)
+13. [Potential Courses of Actions](#potential-courses-of-actions)
+14. [Conclusion](#conclusion)
 
-16. # **Emergency Room Data Analysis Project Documentation**
 
-## **1. Objective**
+## **1. objective**
 The purpose of this project is to analyze emergency room (ER) operations, identify trends in patient visits, and propose actionable recommendations to optimize workflows, improve patient satisfaction, and reduce wait times.
 
 ---
 
 ## **2. Data Source**
-The data was sourced from hospital ER logs for May 2024. It contains:
-- 995 patient records.
+The data was sourced from hospital ER logs from April 2003 to October 2024. It contains:
+- 9,217 patient records.
 - Features include patient demographics, admission details, satisfaction scores, and department referrals.
 
 ---
@@ -44,38 +42,28 @@ The data was sourced from hospital ER logs for May 2024. It contains:
 The project was executed in the following stages:
 1. Data exploration and cleaning.
 2. Transformation of data for modeling.
-3. Creation of SQL views for Power BI integration.
-4. Building interactive dashboards.
-5. Final analysis and recommendations.
+3. Building interactive dashboards.
+4. Final analysis and recommendations.
 
 ---
 
 ## **4. Design**
 The project followed a structured design process:
 - Data flow was planned from raw files to visual dashboards.
-- SQL views were created for summarised and optimized data queries.
+- A calendar table was created to enable data-based analysis
 - Power BI dashboards were designed with user-friendly interfaces for quick insights.
 
 ---
 
-## **5. Mockup**
-The initial mockup included:
-- A high-level dashboard for summary metrics (e.g., patient visits, average wait times).
-- Detailed charts for demographics, satisfaction, and operational bottlenecks.
-- Heatmaps to visualize patient flow by day and time.
-
----
-
-## **6. Tools**
+## **5. Tools**
 The following tools were used:
 - **Power BI**: For data modeling, dashboards, and visualizations.
-- **SQL Server**: For data transformation and query optimization.
-- **Python**: For initial data cleaning and exploration.
+- **Power Query**: For data cleaning, transformation, and standardization. 
 - **Excel**: For dataset review and minor adjustments.
 
 ---
 
-## **7. Process**
+## **6. Process**
 
 ### **Data Exploration**
 - Key variables were identified, including demographics, admission times, and satisfaction scores.
@@ -88,6 +76,7 @@ The following tools were used:
 ### **Transform the Data**
 - Categorical variables (e.g., patient gender, race) were encoded.
 - Age groups were categorized (e.g., children, adults, seniors).
+- Additional columns were added to split the patient admission date into **year*, **month*, **weekday*, **weeknomba*, and time in **hour* 
 
 ### **Create the SQL View**
 - A SQL view was created to optimize data queries for Power BI, ensuring efficient load times and accurate reporting.
