@@ -32,6 +32,7 @@ The purpose of this project is to analyze emergency room (ER) operations, identi
 The data was sourced from hospital ER logs from April 2003 to October 2024. It contains:
 - 9,217 patient records.
 - Features include patient demographics, admission details, satisfaction scores, and department referrals.
+- The Datasets can be found [here](https://github.com/Yakubu-Moshood/ER-Data-Analysis-Project/blob/08dea7efb1ba65ecd2301c91c6dbea5385e3b8cb/Hospital%20ER_Data%202.csv)
 
 ---
 
