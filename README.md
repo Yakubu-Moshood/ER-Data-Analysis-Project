@@ -1,2 +1,27 @@
-# ER-Data-Analysis-Project
-Emergency Room Data Analysis Project Documentation
+# **Emergency Room Data Analysis Project**
+
+## **Table of Contents**
+1. [Objective](#objective)
+2. [Data Source](#data-source)
+3. [Stages](#stages)
+4. [Design](#design)
+5. [Mockup](#mockup)
+6. [Tools](#tools)
+7. [Process](#process)
+    - [Data Exploration](#data-exploration)
+    - [Data Cleaning](#data-cleaning)
+    - [Transform the Data](#transform-the-data)
+    - [Create the SQL View](#create-the-sql-view)
+    - [Testing](#testing)
+        - [Data Quality Tests](#data-quality-tests)
+8. [Visualization](#visualization)
+9. [Results](#results)
+    - [DAX Measures](#dax-measures)
+    - [Analysis](#analysis)
+    - [Findings](#findings)
+10. [Validation](#validation)
+11. [Discovery](#discovery)
+12. [Recommendations](#recommendations)
+13. [Potential ROI](#potential-roi)
+14. [Potential Courses of Actions](#potential-courses-of-actions)
+15. [Conclusion](#conclusion)
