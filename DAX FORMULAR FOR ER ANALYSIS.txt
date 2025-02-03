@@ -1,0 +1,258 @@
+1. Avg Satisfaction Growth With Arrow = 
+    IF(
+        ISBLANK([Avg Satisfaction Score]),
+        BLANK(), 
+        IF(
+            [Avg Satisfaction Score Variance]>=0, 
+            ROUND([Avg Satisfaction Score Growth]*100,1) & "% ↑",
+            ROUND([Avg Satisfaction Score Growth]*100,1) & "% ↓"
+        )
+    )
+
+2. Avg Satisfaction Score = 
+    AVERAGE('Hospital ER_Data 2'[Patient Satisfaction Score])
+
+3. Avg Satisfaction Score Growth = 
+    DIVIDE(
+        [Avg Satisfaction Score Variance], 
+        [PM Avg Satisfaction Score]
+    )
+
+4. Avg Satisfaction Score Growth Colour = 
+    IF(
+        [Avg Satisfaction Score Growth]>=0, 
+        "Green", 
+        "Red"
+    )
+
+5. Avg Satisfaction Score Max Value = 
+    VAR _value = 
+        MAXX(
+            ALL('Calendar'[Day]),
+            [Avg Satisfaction Score]
+        )
+
+    VAR _check = 
+        IF(
+            _value = [Avg Satisfaction Score], 
+            _value, 
+            BLANK()
+        )
+RETURN
+    _check 
+
+6. Avg Satisfaction Score Min Value = 
+    VAR _value = 
+        MINX(
+            ALL('Calendar'[Day]),
+            [Avg Satisfaction Score]
+        )
+
+    VAR _check = 
+        IF(
+            _value = [Avg Satisfaction Score], 
+            _value, 
+            BLANK()
+        )
+RETURN
+    _check 
+
+7. Avg Satisfaction Score Variance = 
+    [Avg Satisfaction Score] - [PM Avg Satisfaction Score]
+
+8. Avg Wait Time Colour = 
+    IF([Avg Wait Time Growth] >=0, 
+    "Green", 
+    "Red"
+    )
+
+9. Avg Wait Time Growth = 
+    DIVIDE(
+        [Avg Wait Time Variance], 
+        [PM Avg Wait Time]
+    )
+
+10. Avg Wait Time Growth With Arrow = 
+    IF(
+        ISBLANK([Avg_Wait_Time]),
+        BLANK(), 
+        IF(
+            [Avg Wait Time Variance]>=0, 
+            ROUND([Avg Wait Time Growth]*100,1) & "% ↑",
+            ROUND([Avg Wait Time Growth]*100,1) & "% ↓"
+        )
+    )
+
+11. Avg Wait Time Max Value = 
+    VAR _value = 
+        MAXX(
+            ALL('Calendar'[Day]),
+            [Avg_Wait_Time]
+        )
+
+    VAR _check = 
+        IF(
+            _value = [Avg_Wait_Time], 
+            _value, 
+            BLANK()
+        )
+RETURN
+    _check 
+
+12. Avg Wait Time Min Value = 
+    VAR _value = 
+        MINX(
+            ALL('Calendar'[Day]),
+            [Avg_Wait_Time]
+        )
+
+    VAR _check = 
+        IF(
+            _value = [Avg_Wait_Time], 
+            _value, 
+            BLANK()
+        )
+RETURN
+    _check 
+
+13. Avg Wait Time Variance = 
+    [Avg_Wait_Time] - [PM Avg Wait Time]
+
+14. Avg_Wait_Time = 
+    AVERAGE('Hospital ER_Data 2'[Patient Waittime])
+
+15. Busiest Day = 
+    CALCULATE(
+        MAXX(
+            TOPN(
+                1,
+                SUMMARIZE(
+                    'Hospital ER_Data 2',
+                    'Calendar'[Weekday],
+                    "Total Patients",[Patient Visit]    
+                ),
+            [Total Patients],
+            DESC
+            ),
+            'Calendar'[Weekday]
+    )
+)
+
+16. Busiest Time = 
+    CALCULATE(
+        MAXX(
+            TOPN(
+                1,
+                SUMMARIZE(
+                    'Hospital ER_Data 2',
+                    'Hospital ER_Data 2'[Start of Hour],
+                    "Total Patients",[Patient Visit]    
+                ),
+            [Total Patients],
+            DESC
+            ),
+            FORMAT('Hospital ER_Data 2'[Start of Hour], "h:mm AM/PM")
+    )
+)
+
+17. Patient Visit = 
+    COUNTROWS('Hospital ER_Data 2')
+
+18. Patient Visit Growth = 
+    DIVIDE(
+        [Patient Visit Variance],
+        [PM Patient Visit])
+
+19. Patient Visit Growth Colour = 
+    IF([Patient Visit Growth] >=0,
+    "Green", 
+    "Red")
+
+20. Patient Visit Growth with Arrow = 
+    IF(
+        ISBLANK([Patient Visit]),
+        BLANK(), 
+        IF(
+            [Patient Visit Variance]>=0, 
+            ROUND([Patient Visit Growth]*100,1) & "% ↑",
+            ROUND([Patient Visit Growth]*100,1) & "% ↓"
+        )
+    )
+
+21. Patient Visit Variance = 
+    [Patient Visit] - [PM Patient Visit]
+
+22. Patient Visits Max Value = 
+    VAR _value = 
+        MAXX(
+            ALL('Calendar'[Day]),
+            [Patient Visit]
+        )
+
+    VAR _check = 
+        IF(
+            _value = [Patient Visit], 
+            _value, 
+            BLANK()
+        )
+RETURN
+    _check 
+
+23. Patient Visits Min Value = 
+    VAR _value = 
+        MINX(
+            ALL('Calendar'[Day]),
+            [Patient Visit]
+        )
+
+    VAR _check = 
+        IF(
+            _value = [Patient Visit], 
+            _value, 
+            BLANK()
+        )
+RETURN
+    _check 
+
+24. PM Avg Satisfaction Score = 
+    CALCULATE([Avg Satisfaction Score], 
+    PREVIOUSMONTH('Calendar'[Date]))
+
+25. PM Avg Wait Time = 
+    CALCULATE(
+        [Avg_Wait_Time], 
+        PREVIOUSMONTH('Calendar'[Date]))
+
+26. PM Patient Visit = 
+    CALCULATE(
+        [Patient Visit],
+        PREVIOUSMONTH('Calendar'[Date]))
+
+27. Score Rating = 
+    REPT("★", [Avg Satisfaction Score])
+
+28. Calendar = 
+VAR MinYear = YEAR(MIN('Hospital ER_Data 2'[Patient Admission Date])) 
+VAR MaxYear = YEAR(MAX('Hospital ER_Data 2'[Patient Admission Date])) 
+RETURN
+    ADDCOLUMNS(
+        FILTER(
+            CALENDAR(MIN('Hospital ER_Data 2'[Patient Admission Date]), MAX('Hospital ER_Data 2'[Patient Admission Date])),
+            AND(YEAR([Date]) >= MinYear, YEAR([Date]) <= MaxYear)
+        ),
+        "Year", YEAR([Date]),
+        "Month", FORMAT([Date], "mmm"),
+        "Monthnum", MONTH([Date]),
+        "Day", DAY([Date]),
+        "Weekday", FORMAT([Date], "ddd"),
+        "Weeknum", WEEKDAY([Date], 1), // Note: WEEKDAY function returns a number, not a week number
+        "Qrt", "Qtr-" & FORMAT([Date], "Q"),
+        "WeekType", IF(WEEKDAY([Date])=1 || WEEKDAY([Date]) = 7, "Weekend", "Weekday")
+    )
+
+29. Sat_Score_Param = {
+    ("Patient Race", NAMEOF('Hospital ER_Data 2'[Patient Race]), 0),
+    ("Patient Gender", NAMEOF('Hospital ER_Data 2'[Patient Gender]), 1),
+    ("Age Range", NAMEOF('Hospital ER_Data 2'[Age Range]), 2)
+}
+
