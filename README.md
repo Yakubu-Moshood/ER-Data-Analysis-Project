@@ -79,6 +79,7 @@ The following tools were used:
 ---
 
 ## **7. Visualization**
+Dashboard Screenshot![Dashboard image](https://github.com/Yakubu-Moshood/ER-Data-Analysis-Project/blob/c0e3323475926d48524610e29d0259e23e9b8445/The%20Dashboard%20complete.jpg)
 Interactive dashboards were created in Power BI, featuring:
 
 ## **a. Key Metrics Cards (Top Section)**
@@ -108,6 +109,8 @@ Interactive dashboards were created in Power BI, featuring:
 
 ## **f. Horizontal Bar Chart: Avg. Wait Time by Department Referral**
 - A bar chart comparing average wait times across various departments (e.g., Physiotherapy, Gastroenterology, Neurology, etc.), highlighting which departments have longer wait times, allowing hospital staff to address bottlenecks or inefficiencies.
+
+The interactive dashboard can be found [here](https://github.com/Yakubu-Moshood/ER-Data-Analysis-Project/blob/c0e3323475926d48524610e29d0259e23e9b8445/EMERGENCY%20ROOM%20ANALYSIS%20INTERACTIVE%20DASHBOARD.pbix)
 
 ---
 
